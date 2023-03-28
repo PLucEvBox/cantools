@@ -168,8 +168,8 @@ class Database:
         database = arxml.load_string(string, self._strict, sort_signals=self._sort_signals)
 
         self._messages += database.messages
-        self._nodes = database.nodes
-        self._buses = database.buses
+        self._nodes += database.nodes
+        self._buses += database.buses
         self._version = database.version
         self._dbc = database.dbc
         self._autosar = database.autosar
@@ -216,8 +216,8 @@ class Database:
         database = dbc.load_string(string, self._strict, sort_signals=self._sort_signals)
 
         self._messages += database.messages
-        self._nodes = database.nodes
-        self._buses = database.buses
+        self._nodes += database.nodes
+        self._buses += database.buses
         self._version = database.version
         self._dbc = database.dbc
         self.refresh()
@@ -252,8 +252,8 @@ class Database:
         database = kcd.load_string(string, self._strict, sort_signals=self._sort_signals)
 
         self._messages += database.messages
-        self._nodes = database.nodes
-        self._buses = database.buses
+        self._nodes += database.nodes
+        self._buses += database.buses
         self._version = database.version
         self._dbc = database.dbc
         self.refresh()
@@ -288,8 +288,8 @@ class Database:
         database = sym.load_string(string, self._strict, sort_signals=self._sort_signals)
 
         self._messages += database.messages
-        self._nodes = database.nodes
-        self._buses = database.buses
+        self._nodes += database.nodes
+        self._buses += database.buses
         self._version = database.version
         self._dbc = database.dbc
         self.refresh()
